@@ -1,0 +1,81 @@
+# print's out the word: text
+print "text"
+
+# math symbols
+# variables
+a = 1 + 2   #adding
+b = 4 - 6   #subtracting
+c = 7 * 9   #multiplying
+d = 4 / 5   #dividing
+e = 5 % 2   #modulus
+
+# \n makes a new line in a print statement
+# %d makes a data point to use variablies in at: % (a, b, c, d)
+# %s for strings
+# %r for anything else
+print "Answers to math questions:"
+print "%d\n%d\n%d\n%d\n%d" % (a, b, c, d, e)
+
+# This is another way to use strings in variables and call the datapoint
+# straight from the variable.
+hilarious = False
+joke_evaluation = "Isn't that joke so funny?! %r"
+print joke_evaluation % hilarious
+
+# This is ex8.py
+# her you can see how you can use %r as a formatter.
+formatter = "%r %r %r %r"
+
+print formatter % (1, 2, 3, 4)
+print formatter % ("one", "two", "three", "four")
+print formatter % (True, False, True, False)
+print formatter % (formatter, formatter, formatter, formatter)
+print formatter % (
+    "I had this thing",
+    "that you could type up right.",
+    "But it didn't sing.",
+    "So I said goodnight"
+)
+
+# escape sequences:
+# \\ backslash
+# \' single-quote
+# \" double-quote
+# \a ASCII bell
+# \b ASCII backspace
+# \f ascii formfeed
+# \n ascii linefeed
+# \N{name} character named name in unicode database
+# \r carriage return
+# \t horizontal tab
+# \uxxxx character with 16-bit hex value
+# \Uxxxxxxxx character with 32-bit hex value
+# \v ascii vertical tab
+# \ooo character with octal value ooo
+# \xhh character with hex value hh
+
+# how to use raw_input
+# and another example of how to use %r
+age = raw_input("How old are you? ")
+height = raw_input("How tall are you? ")
+weight = raw_input("How much do you weigh? ")
+
+print "So you're %r old, %r tall and %r heavy." % (age, height, weight)
+
+
+# importing argv
+from sys import argv
+
+# and how to use it.
+script, first, second, third = argv
+
+print "the script is called:", script
+print "your first variable is:", first
+print "your second variable is:", second
+print "your third variable is:", third
+
+# when importing remember to type in the variables like this:
+# > python ex13.py var1 var2 var3
+
+someData = raw_input("what do you want?")
+print someData
