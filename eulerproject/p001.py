@@ -7,4 +7,4 @@ for _ in range(1000):
     else:
         continue
 
-print(s)
+print(str(s) + "%")
